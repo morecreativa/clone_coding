@@ -8,6 +8,11 @@
 
 2. Create
 -Build the Product component
+1) rfce -> Write file form super clean!
+2) Mark thing to do shift+Alt+A
+3) functional, class based components
+before everything was class based
+function has input and output
 -Introduce React Context API
 -Set Add to Basket Button
 -Build Chekcout Page
