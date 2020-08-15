@@ -2,6 +2,9 @@ import React from 'react';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import './App.css';
+import Checkout from './Checkout';
+import Login from './Login';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -10,11 +13,11 @@ function App() {
       <div className="app">
         <Switch>
           <Route path="/checkout">
-            <h1>CheckOut</h1>
+            <Header />
+            <Checkout />
           </Route>
-
           <Route path="/login">
-            <h1>Login Page</h1>
+            <Login />
           </Route>
 
           {/* This is the default route */}
