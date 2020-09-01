@@ -1,4 +1,4 @@
-[STEPS FOR AMAZONE CLONING - 2020/08/04]
+# [STEPS FOR AMAZONE CLONING - 2020/08/04]
 1. DEMO App
 -Set up React app using
 "npx create-react-app 'App name'"
