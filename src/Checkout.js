@@ -11,7 +11,7 @@ function Checkout() {
         <div className="checkout">
             <div className="checkout_left">
                 <img className="checkout__ad"
-                    src="https://drive.google.com/uc?export=download&id=14TGQ5Wz8Y3n8q5_lXjmIzhzCsd7ro809"
+                    src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
                     alt=""
                 />
                 {basket?.length === 0 ? (
@@ -25,7 +25,7 @@ function Checkout() {
                 ) : (
                         <div >
                             <h2 className="checkout__title">Your Shopping Basket</h2>
-
+ 
                             {/* List out all of the checkout Products */}
                             {basket?.map(item => (
                                 <CheckoutProduct

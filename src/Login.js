@@ -1,31 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Login.css";
-import {Link, userHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "./firebase";
 
 function Login() {
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const login = (event) => {
+        event.preventDefault(); //this stops the refresh!!
+        // do the login Logic...
+
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+                //logged in, redirect to homepage...
+                history.push("/");
+
+            })
+            .catch(e => alert(e.message));
+    };
+
+    const register = (event) => {
+        event.preventDefault(); //this stops the refresh!!
+        //do the register logic...
+
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(auth => {
+                // created a user and logged in, redirect to homepage...
+                history.push("/");
+            })
+            .catch(e => alert(e.message));
+    };
+
     return (
         <div className="login">
             <Link to="/">
-                <img 
-                className="longin_logo"
-                src="https://i2.wp.com/indiaeducationdiary.in/wp-content/uploads/2020/05/Amazon2.jpg?w=400&ssl=1"
-                alt=""
+                <img
+                    className="login__logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/800px-Amazon_logo.svg.png"
+                    alt=""
                 />
             </Link>
 
             <div className="login__container">
                 <h1>Sign in</h1>
                 <form>
-                    <h5>E-mail</h5><input type="text"/>
-                    <h5>password</h5><input type="text"/>
-                    <button>Sign In</button>
+                    <h5>E-mail</h5>
+                    <input value={email} onChange={event =>
+                        setEmail(event.target.value)}
+                        type="email" />
+                    <h5>password</h5>
+                    <input value={password} onChange={event =>
+                        setPassword(event.target.value)} type="password" />
+                    <button onClick={login} type="submit" className="login__singInButton">
+                        Sign In
+                    </button>
                 </form>
 
                 <p>
-                By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
+                    By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
                 </p>
 
-                <button>Crete your Amazone Account</button>
+                <button onClick={register}>Crete your Amazone Account</button>
             </div>
         </div>
     )

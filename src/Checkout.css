@@ -12,6 +12,6 @@
 
 .checkout__ad {
     width: 100%;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
-    margin-bottom: -5%;
+    /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0)); */
+    /* margin-bottom: -5%; */
 }

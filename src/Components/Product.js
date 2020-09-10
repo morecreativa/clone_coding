@@ -3,7 +3,7 @@ import './Product.css';
 import { useStateValue } from '../StateProvider';
 
 function Product({ key, id, title, image, price, rating }) {
-    const [{}, dispatch] = useStateValue();
+    const [{ }, dispatch] = useStateValue();
 
     const addToBasket = () => {
         //Add item to basket....
@@ -19,8 +19,9 @@ function Product({ key, id, title, image, price, rating }) {
         });
     };
 
-    return (<div className="product">
-        <div className="product__info">
+    return (
+    <div className="product">
+        <div className="product__info"> 
             <p>{title.slice(0, 100)}...</p>
             <p className="product__price">
                 <small>$</small>
