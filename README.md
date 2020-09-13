@@ -18,3 +18,5 @@ function has input and output
 -Build Chekcout Page
 -Build Login Page
 -Deploy the App on Firebase
+
+3. Full E-Commerce + Stripe using React JS
