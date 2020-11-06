@@ -1,4 +1,4 @@
-# [STEPS FOR AMAZONE CLONING - 2020/08/04]
+## [STEPS FOR AMAZONE CLONING - 2020/08/04]
 1. DEMO App
 -Set up React app using
 "npx create-react-app 'App name'"
@@ -20,3 +20,5 @@ function has input and output
 -Deploy the App on Firebase
 
 3. Full E-Commerce + Stripe using React JS
+
+4. Carousel Design for Banner AD
