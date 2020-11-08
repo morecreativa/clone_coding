@@ -22,3 +22,4 @@ function has input and output
 3. Full E-Commerce + Stripe using React JS
 
 4. Carousel Design for Banner AD
+### yarn add react-responsive-carousel
