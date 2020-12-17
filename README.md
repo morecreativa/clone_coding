@@ -7,7 +7,7 @@
 -Build the nav bar(header)
 
 2. Create
--Build the Product component
+### Build the Product component
 1) rfce -> Write file form super clean!
 2) Mark thing to do shift+Alt+A
 3) functional, class based components
@@ -22,4 +22,4 @@ function has input and output
 3. Full E-Commerce + Stripe using React JS
 
 4. Carousel Design for Banner AD
-### yarn add react-responsive-carousel
+### yarn add react-responsive-carousel 
